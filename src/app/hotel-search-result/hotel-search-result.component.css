@@ -1,0 +1,145 @@
+.hotel-search-result__header {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0.75em;
+}
+
+.hotel-search-result__logo {
+  display: block;
+  height: 25px;
+  width: 100px;
+}
+
+.hotel-search-result__name {
+  flex-grow: 1;
+  font-size: 1em;
+  font-weight: normal;
+  line-height: 25px;
+  margin: 0 1em;
+  vertical-align: middle;
+}
+
+.hotel-search-result__toggle-detail {
+  background: none;
+  border: none;
+  color: #b89beb;
+  flex-grow: 1;
+  font-weight: bold;
+  padding: 0;
+  text-align: right;
+}
+
+.hotel-search-result__toggle-detail-text {
+  display: none;
+}
+
+.hotel-search-result__arrow-icon {
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.hotel-search-result__arrow-icon--retract {
+  transform: rotate(180deg);
+}
+
+.hotel-search-result__detail {
+  align-items: flex-start;
+  border-top: #e4e4e4 solid 1px;
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.hotel-search-result__description {
+  font-size: 0.75em;
+  margin: 1em;
+  max-width: 480px;
+}
+
+.hotel-search-result__more {
+  background: #fed468;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  font-size: 1.125em;
+  font-weight: bold;
+  margin-top: 0.75em;
+  padding: 0.75em 1.5em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.hotel-search-result__dialog-backdrop {
+  background: rgba(0, 0, 0, 0.75);
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+}
+
+.hotel-search-result__dialog {
+  background: white;
+  border-radius: 3px;
+  box-sizing: border-box;
+  left: 50%;
+  max-width: calc(100vw - 2em);
+  min-width: 300px;
+  padding: 2em;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hotel-search-result__dialog-title {
+  font-size: 0.75em;
+  margin: 1em;
+  text-align: center;
+}
+
+.hotel-search-result__dialog-actions {
+  display: flex;
+  justify-content: space-around;
+}
+
+.hotel-search-result__dialog-action {
+  background: none;
+  border: none;
+  color: #b89beb;
+  font-weight: bold;
+  padding: 1em;
+}
+
+@media (min-width: 661px) {
+  .hotel-search-result__toggle-detail-text {
+    display: inline;
+  }
+}
+
+@media (min-width: 800px) {
+  .hotel-search-result__header {
+    padding: 1ex 2em;
+  }
+
+  .hotel-search-result__logo {
+    height: 50px;
+    width: 200px;
+  }
+
+  .hotel-search-result__name {
+    font-size: 1.25em;
+    line-height: 50px;
+  }
+
+  .hotel-search-result__toggle-detail {
+    font-size: 1.25em;
+  }
+
+  .hotel-search-result__detail {
+    padding: 2ex 2em;
+  }
+
+  .hotel-search-result__description {
+    font-size: 1em;
+  }
+}

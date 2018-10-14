@@ -1,0 +1,38 @@
+.hotel-search-header {
+  box-sizing: border-box;
+  background: url('../assets/background-header.svg') center center no-repeat;
+  background-size: cover;
+  height: 300px;
+  padding: 1em;
+}
+
+.hotel-search-header__logo {
+  display: block;
+  fill: white;
+  margin: 44px auto 60px;
+}
+
+.hotel-search-results {
+  padding: 1em;
+}
+
+@media (min-width: 920px) {
+  .hotel-search-header {
+    height: 32.3958vw;
+    max-height: 414px;
+    background-position: bottom;
+  }
+
+  .hotel-search-results {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1280px) {
+  .hotel-search-header__logo {
+    height: 80px;
+    margin: 64px auto 80px;
+    width: 274px;
+  }
+}

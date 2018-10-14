@@ -1,0 +1,46 @@
+.hotel-search-form {
+  display: flex;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.hotel-search-form__input {
+  background: white;
+  border: #e8e8e8 solid 1px;
+  border-right: none;
+  border-radius: 3px 0 0 3px;
+  color: #bababa;
+  flex-grow: 1;
+  font-family: sans-serif;
+  font-size: 1em;
+  padding: 1ex 1em;
+  text-transform: uppercase;
+}
+
+.hotel-search-form__submit {
+  background: #fcdb67;
+  border: none;
+  border-radius: 0 3px 3px 0;
+  color: white;
+  padding: 1ex 2em;
+}
+
+.hotel-search-form__submit-icon {
+  fill: currentColor;
+  vertical-align: middle;
+}
+
+.hotel-search-form__submit-text {
+  display: none;
+}
+
+@media (min-width: 1280px) {
+  .hotel-search-form {
+    font-size: 1.25em;
+  }
+
+  .hotel-search-form__submit-icon {
+    height: 1.5em;
+    width: 1.5em;
+  }
+}

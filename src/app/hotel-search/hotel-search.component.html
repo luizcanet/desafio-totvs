@@ -1,0 +1,16 @@
+<form class="hotel-search-form" (ngSubmit)="onSubmit(searchBox.value)">
+  <input class="hotel-search-form__input" #searchBox id="search-box" (keyup)="search(searchBox.value)"
+    list="search-suggestions" autocomplete="off" placeholder="Informe a sua busca" />
+  <button class="hotel-search-form__submit" type="submit">
+    <svg class="hotel-search-form__submit-icon" width="16" height="16">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/icons.svg#magnifier">
+      </use>
+    </svg>
+    <span class="hotel-search-form__submit-text"> Buscar</span>
+  </button>
+  <datalist id="search-suggestions">
+    <option *ngFor="let hotel of hotels$ | async"  value="{{hotel.name}}">
+      {{hotel.name}}
+    </option>
+  </datalist>
+</form>

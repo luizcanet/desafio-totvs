@@ -1,0 +1,11 @@
+<h1 class="hotel-search-results__title" *ngIf="hasSearch">Resultado da busca</h1>
+<div class="hotel-search-results__content" *ngIf="hasSearch">
+  <article class="hotel-search-result" *ngFor="let hotel of hotels" [hotel]="hotel">
+  </article>
+  <p class="hotel-search-result__no-search-results-text" *ngIf="!hotels">
+    Nenhum hotel encontrado.
+  </p>
+</div>
+<p class="hotel-search-result__no-search-text" *ngIf="!hasSearch">
+  Você ainda não realizou nenhuma busca!
+</p>

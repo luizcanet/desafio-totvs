@@ -1,0 +1,40 @@
+<header class="hotel-search-result__header">
+  <img class="hotel-search-result__logo"
+    src="assets/logos/{{ hotel.logo }}" alt="Logo do Hotel" width="300" height="75" />
+  <h1 class="hotel-search-result__name">{{ hotel.name }}</h1>
+  <button class="hotel-search-result__toggle-detail" type="button" (click)="toggleDetail()">
+    <span class="hotel-search-result__toggle-detail-text">
+      {{ showDetail ? 'Ocultar' : 'Ver' }} detalhe da ação
+    </span>
+    <svg class="hotel-search-result__arrow-icon" [ngClass]="{ 'hotel-search-result__arrow-icon--retract': showDetail }"
+      width="16" height="16">
+      <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="assets/icons.svg#expand">
+      </use>
+    </svg>
+  </button>
+</header>
+<div class="hotel-search-result__detail" *ngIf="showDetail">
+  <p class="hotel-search-result__description">
+    {{ hotel.description }}
+  </p>
+  <button class="hotel-search-result__more" type="button" (click)="openDialog()">
+    Ver mais
+  </button>
+</div>
+<div class="hotel-search-result__dialog-backdrop" *ngIf="showDialog">
+  <section class="hotel-search-result__dialog">
+    <header class="hotel-search-result__dialog-header">
+      <h1 class="hotel-search-result__dialog-title">
+        Tem certeza que deseja ir para a tela?
+      </h1>
+    </header>
+    <footer class="hotel-search-result__dialog-actions">
+      <button class="hotel-search-result__dialog-action" (click)="closeDialog()">
+        Não
+      </button>
+      <button class="hotel-search-result__dialog-action" (click)="closeDialog()">
+        Sim
+      </button>
+    </footer>
+  </section>
+</div>

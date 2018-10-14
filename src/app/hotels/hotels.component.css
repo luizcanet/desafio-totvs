@@ -1,0 +1,22 @@
+.hotel-search-results__title {
+  color: #949494;
+  font-size: 1.5em;
+}
+
+.hotel-search-result {
+  background: white;
+  border: #e4e4e4 solid 1px;
+  border-radius: 3px;
+  margin-bottom: 1em;
+}
+
+.hotel-search-result__no-search-text {
+  background: url('../../assets/search.svg') center top no-repeat;
+  background-size: 200px, auto;
+  color: #c9c9c9;
+  margin: 0 auto;
+  line-height: 3ex;
+  max-width: 200px;
+  padding-top: 224px;
+  text-align: center;
+}
